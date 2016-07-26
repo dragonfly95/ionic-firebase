@@ -1,0 +1,58 @@
+
+<ion-view cache-view="false" view-title="장애접수">
+  <ion-title>장애접수 101 </ion-title>
+  <ion-content class="padding">
+
+    <div class="list">
+      <label class="item item-input item-floating-label">
+        <span class="input-label">장애접수 </span>
+        <select class="item item-input" ng-model="helpme.category">
+          <option value="" ng-value="cat1">인터넷 장애</option>
+          <option value="" ng-value="cat2">PC 장애</option>
+          <option value="" ng-value="cat3">하드웨어 / 소프트웨어 장애</option>
+          <option value="" ng-value="cat4">주변기기 장애 (프린터)</option>
+        </select>
+      </label>
+
+      <label class="item item-input item-floating-label">
+        <span class="input-label">접수내용 </span>
+        <textarea name="contents" placeholder="내용을 입력해주세요." ng-model="helpme.contents" rows="5"></textarea>
+      </label>
+
+      <label class="item item-input item-floating-label">
+        <span class="input-label">연락받을 전화번호 </span>
+        <input type="tel" value="" placeholder="연락받을 전화번호" ng-model="helpme.telephone" required>
+      </label>
+
+      <label class="item item-input item-floating-label">
+        <span class="input-label">사진첨부  </span>
+        <input type="file" value="" placeholder="사진첨부" ng-model="helpme.pictureFileName" required>
+      </label>
+
+      <label class="item item-input item-floating-label">
+        <button class="button button-full button-assertive" ng-click="takePhoto()">
+        Take Photo
+        </button>
+        <!-- <button class="button button-full button-assertive" ng-click="choosePhoto()">
+        Choose Photo
+        </button> -->
+      </label>
+
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <button class="button button-block button-positive" ng-click="helpmeCreate(helpme);">
+          내용 저장
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <pre>helpme = {{helpme | json}}</pre>
+      </div>
+    </div>
+
+  </ion-content>
+
+</ion-view>

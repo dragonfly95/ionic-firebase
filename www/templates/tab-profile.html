@@ -1,0 +1,36 @@
+
+<ion-view view-title="Login">
+  <ion-title>login</ion-title>
+  <ion-content class="padding">
+
+    <h2>Register to firebase</h2>
+
+    <div class="list">
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Email</span>
+        <p>
+          {{profile}}
+        </p>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">Password</span>
+        <input type="password" placeholder="Password" value="wjstkstlf" ng-model="user.password" required>
+      </label>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <button class="button button-block button-positive" ng-click="register(user);">
+          가입하기
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <pre>user = {{user | json}}</pre>
+      </div>
+    </div>
+
+  </ion-content>
+
+</ion-view>

@@ -1,0 +1,28 @@
+<ion-view cache-view="false" view-title="장애접수 List">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right"
+        ng-repeat="(key, helpme) in helpmeList" type="item-text-wrap" href="#/tab/helpmeDetail/{{key}}">
+        <img ng-src="{{helpme.face}}">
+        <h2>{{helpme.category}}</h2>
+        <p>{{helpme.contents}}</p>
+        <p>{{helpme.telephone}}</p>
+        <p>
+          {{helpme.uid}}
+        </p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(faq)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+    <div class="row">
+      <div class="col-12">
+        <button class="button button-block button-positive" ng-click="goRegistHelpme();">
+          신규등록
+        </button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>

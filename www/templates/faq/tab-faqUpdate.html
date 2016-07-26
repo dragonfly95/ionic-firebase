@@ -1,0 +1,41 @@
+
+<ion-view cache-view="false" view-title="{{faq.titles}}">
+  <ion-title>test 1234</ion-title>
+  <ion-content class="padding">
+
+    <div class="list">
+      <label class="item item-input item-floating-label">
+        <span class="input-label">질문 </span>
+        <input type="text" placeholder="질문을 입력해주세요."
+          style="line-height:180%;font-size:14pt;font-family:맑은고딕;"
+          ng-model="faq.titles" required>
+      </label>
+      <label class="item item-input item-floating-label">
+        <span class="input-label">답변 </span>
+        <textarea name="contents" placeholder="답변을 입력해주세요."
+          style="line-height:180%;font-size:14pt;font-family:맑은고딕;"
+          ng-model="faq.contents" rows="10"></textarea>
+      </label>
+    </div>
+
+    <div class="row">
+      <div class="col">
+        <button class="button button-block button-positive" ng-click="faqUpdate(faq);">
+          내용 변경
+        </button>
+      </div>
+      <div class="col">
+        <button class="button button-block button-positive" ng-click="faqUpdateCancel();">
+          변경 취소
+        </button>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <pre>faq = {{faq | json}}</pre>
+      </div>
+    </div>
+
+  </ion-content>
+
+</ion-view>

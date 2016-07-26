@@ -1,0 +1,41 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view cache-view="false" view-title="{{helpmeObject.titles}}">
+  <ion-content class="padding">
+    <img ng-src="{{helpmeObject.face}}" style="width: 64px; height: 64px">
+    <h2>{{helpmeObject.category}}</h2>
+    <hr>
+    <span style="color:#afafaf;">접수자</span>
+    <div style="line-height:180%;font-size:14pt;">
+      {{helpmeObject.displayName}} {{helpmeObject.helpmeId}}
+    </div>
+    <hr>
+    <span style="color:#afafaf;">접수내용 </span>
+    <pre style="line-height:180%;font-size:14pt;">{{helpmeObject.contents}}</pre>
+    <hr>
+    <span style="color:#afafaf;">전화번호</span>
+    <div style="line-height:180%;font-size:14pt;">
+      {{helpmeObject.telephone}}
+    </div>
+
+
+    <hr>
+    <div class="row">
+      <div class="col">
+        <a class="button button-block button-positive" href="#/tab/helpmeUpdate/{{helpmeId}}">
+          내용 수정
+        </a>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <pre>faq = {{faq | json}}</pre>
+      </div>
+    </div>
+
+  </ion-content>
+</ion-view>

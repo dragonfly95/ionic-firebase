@@ -1,0 +1,27 @@
+<ion-view cache-view="false" view-title="Faq List">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right"
+        ng-repeat="(key,faq) in faqList" type="item-text-wrap" href="#/tab/faqDetail/{{key}}">
+        <img ng-src="{{faq.face}}">
+        <h2>{{faq.titles}}</h2>
+        <p>{{faq.contents}}</p>
+        <p>
+          {{faq.uid}}
+        </p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="remove(faq)">
+          Delete
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+    <div class="row">
+      <div class="col-12">
+        <button class="button button-block button-positive" ng-click="goFaq();">
+          신규등록
+        </button>
+      </div>
+    </div>
+  </ion-content>
+</ion-view>
